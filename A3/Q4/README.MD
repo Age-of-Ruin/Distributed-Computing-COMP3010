@@ -1,3 +1,4 @@
+# Web ATM using PHP
 In essence, question 4 implements a web application that works by relaying commands recieved by bank.html webpage to the bank.php script which returns the correct response. The program emulates a simple banking service and offers the following commands:
 
 Create Account [Acct Num]

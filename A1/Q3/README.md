@@ -1,3 +1,4 @@
+# Multi-Threaded TCP ATM
 Question 3 now implements a multi-threaded and connection-oriented client/server model (simulating a banking system) which communicate via strings. The multi-threaded implementation supports many concurrent client connections (ie multiple clients can hold a connection and make changes at a single moment). NOTE: The processRequest() method in Q3_Server is declared as SYNCHRONIZED - this means that only 1 thread can change/update the bankInfo hashtable at any one time. As previously, after a client has established a connection, the server will accept a SINGLE string as a command before disconnecting the client - ie the client must reconnect to perform more actions.
 
 To compile and run the server:

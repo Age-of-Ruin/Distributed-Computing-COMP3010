@@ -1,3 +1,4 @@
+# Single-Threaded TCP ATM
 Question 2 implements a simple, single-threaded and connection-oriented client/server model (simulating a banking system) which communicate via strings. Since the server is only single threaded, it will only support 1 client connection at any given time (but can backlog/queue up to 3). After a client has established a connection, the server will accept a SINGLE string as a command before disconnecting the client - ie the client must reconnect to perform more actions.
 
 To compile and run the server:

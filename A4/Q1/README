@@ -1,1 +1,0 @@
-Question 1 implements a Javascript/JQuery program that walks through the Document Object Model (DOM) and prints the hierarchal tags to the browser. The javascript is executed immediatedly once the page has been lauched by a web browser, then proceeds to print the hierarchical tags to that browser page. 
