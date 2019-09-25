@@ -1,0 +1,1 @@
+The file Q2_Server.java implements a multi-threaded stream-socket bank server that uses a mySQL server (located at www3.cs.umanitoba.ca) to store bank data persistently. The Q2_Server.java application takes 3 arguments when executed: 1) database name, 2) user id, 3) password in order to connect to the correct DB.

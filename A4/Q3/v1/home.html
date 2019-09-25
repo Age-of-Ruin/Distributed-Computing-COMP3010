@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <Title>Ultimate Video Repository</Title>
+        <link rel='stylesheet' type='text/css' href='home.css'>
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    </head>
+    <body>
+
+        <!-- Welcome Message -->
+        <h1>Welcome to the Ultimate Video Repository</h1>
+
+        <!-- Server selection -->
+        <h3>Please choose a server...</h3>
+        <div class='selectServer' id='serverList'></div>            
+
+        <!-- Display selected server -->
+        <h4 class='selectServer' id='selectedServer'></h4>
+
+        <!-- Select video encoding format-->
+        <h3 class='formatSelect'>Please choose an encoding format...</h3>
+        <div class='formatSelect' id='formatList'></div>
+
+        <!-- Display selected encoding format -->
+        <h4 class='formatSelect' id='selectedFormat'></h4>
+
+        <!-- Select video encoding format-->
+        <h3 class='videoSelect'>Please select a video...</h3>
+        <ul class='videoSelect' id='videoList'></ul>
+
+        <!-- Video Detail -->
+        <div class='videoSelect' id='videoDetail'></div>
+
+        <script>
+
+            // Store selected server and encoding format
+            var servID = 1;
+            var format = '';
+
+            // On document ready
+            $(document).ready(function(){
+            
+                //Hide format selection (until server is selected)
+                $('.formatSelect').hide();
+                $('.videoSelect').hide();
+
+                // Script to load server list v2 (JQuery & Ajax )
+                $.post('home.php',{serverList: 'serverList'}, function(data, status){
+                    $('#serverList').html(data);
+                })
+
+                // Script to load format list (JQuery & Ajax )
+                $.post('home.php',{formatList: 'formatList'}, function(data, status){
+                    $('#formatList').html(data);
+                })
+
+                // Script to display server list v1 (Javascript and Ajax)
+                // var xmlhttp = new XMLHttpRequest();
+                // xmlhttp.onreadystatechange = function() {
+                //     if (this.readyState == 4 && this.status == 200) {
+                //         document.getElementById('selectServer').innerHTML = this.responseText;
+                //     }
+                // };
+                // xmlhttp.open('POST', 'home.php?arg=serverList', true);
+                // xmlhttp.send();
+
+            });
+
+            // Handles server selection (sent onClick method sent from server)
+            function selectServer(serv, servName){
+                servID = serv;
+                $('#selectedServer').html('You have selected ' + servName + '.');
+                $('.formatSelect').show();
+                $('#selectedFormat').hide();
+                $('.videoSelect').hide();
+                updateVideoList(servID, format);
+            }
+
+            // Handles format selection 
+            function selectFormat(form){
+                var selectedFormat = document.getElementById('selectedFormat');
+                format = form;
+                $('#selectedFormat').html('You have selected ' + format + '.');
+                $('.videoSelect').show();
+                $('#selectedFormat').show();
+                $('#videoDetail').hide();
+                updateVideoList(servID, format); 
+            }
+
+            // Handles video selection
+            function selectVideo(videoID){
+                // Script to display video detail (JQuery & Ajax)
+                $.post('home.php',{selectedVideo: videoID}, function(data, status){
+                    $('#videoDetail').html(data);
+                })
+
+                $('#videoDetail').show();
+            }
+
+            // Updates list of videos according to selection
+            function updateVideoList(servID, format){
+                // Script to display video list (JQuery & Ajax)
+                $.post('home.php',{selectedServer: servID, selectedFormat: format}, function(data, status){
+                    $('#videoList').html(data);
+                })
+            }
+
+        </script>
+    </body>
+</html>

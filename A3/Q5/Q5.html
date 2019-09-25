@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Recursive DOM Walk</title>
+    </head>
+
+    <body>
+        <div>
+            <h1>Walking the DOM...</h1>
+        </div>
+
+        <script>
+
+            var count = 1;
+
+            // Recursively walk the DOM
+            function walkTheDOM(node, count) {
+                node = node.firstChild;
+                while (node) {
+                    if (node.nodeName != '#text')
+                        console.log(count + " <" + node.nodeName + ">");
+                    
+                    walkTheDOM(node, count+1);
+
+                    if (node.nodeName != '#text')
+                        console.log(count + " </" + node.nodeName + ">");
+                    
+                    node = node.nextSibling;
+                }
+            }
+
+            // Call the DOM traversal function and store node names
+            walkTheDOM(document, count);
+        
+        </script> 
+
+    </body>
+</html> 

@@ -1,0 +1,29 @@
+body {
+  background-color:powderblue;
+}
+
+#selectedServer, #selectedFormat, .videoDetail {
+	color:red;
+}
+
+.serverOption, .videoOption {
+   width:55px;
+}
+
+.encodingFormat {
+	width:30px;
+}
+
+.serverOption:hover, .formatOption:hover, .videoOption:hover {
+   color:red;
+}
+
+#videoTitle {
+	font-size:20px;
+	text-decoration:underline;
+}
+
+#videoList {
+	width:100px;
+	overflow-y:scroll;
+}

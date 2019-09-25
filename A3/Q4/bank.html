@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>The Bank</title>
+	</head>
+
+	<body>
+		<!-- Welcome Message -->
+		<h1>Welcome to the Bank!</h1>
+		<h4>Please select an option</h4>
+
+		<!-- Form Data -->
+		<form action="bank.php" method="post">
+
+			<!-- Create Account -->
+			<input type="radio" name="command" value="Create Account" checked> Create Account<br>
+			Account Number: <input type="text" name="create_acct_num" value="1"><br><br>
+
+			<!-- Retreive Balance -->
+			<input type="radio" name="command" value="Retrieve Balance"> Retrieve Balance<br>
+			Account Number: <input type="text" name="retrieve_acct_num" value="1"><br><br>
+
+			<!-- Deposit -->
+			<input type="radio" name="command" value="Deposit Amount"> Deposit Amount<br>
+			Account Number: <input type="text" name="deposit_acct_num" value="1"><br>
+			Amount: <input type="text" name="deposit_amount" value="100"><br><br>
+
+			<!-- Withdraw -->
+			<input type="radio" name="command" value="Withdraw Amount"> Withdraw Amount<br>
+			Account Number: <input type="text" name="withdraw_acct_num" value="1"><br>
+			Amount: <input type="text" name="withdraw_amount" value="100"><br><br>
+			
+			<!-- Show All Account Info -->
+			<input type="radio" name="command" value="Show Accounts"> Show Accounts<br><br>
+
+			<!-- Submit Button -->
+			<input type="submit">
+		</form>
+	</body>
+</html>

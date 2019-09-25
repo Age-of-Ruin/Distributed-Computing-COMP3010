@@ -1,0 +1,45 @@
+<!-- This schema describes Q2.xml which formats a collection of 
+online websites which offer free access to videos and their information. -->
+
+<?xml version="1.0"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="OnlineMedia">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Website" maxOccurs="unbounded" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element type="xs:anyURI" name="URL"/>
+							<xs:element type="xs:string" name="CommonName"/>
+							<xs:element type="xs:string" name="Reliability">
+								<xs:complexType>
+									<xs:choice maxOccurs="1" minOccurs="1">
+										<xs:element type="xs:string" name="Great"/>
+										<xs:element type="xs:string" name="Good"/>
+										<xs:element type="xs:string" name="Ok"/>
+										<xs:element type="xs:string" name="Awful"/>
+									</xs:choice>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="VideoLibrary">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Video">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element type="xs:string" name="VideoTitle"/>
+													<xs:element type="xs:short" name="VideoRuntime"/>
+													<xs:element type="xs:string" name="VideoEncodingFormat"/>
+												</xs:sequence>										
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

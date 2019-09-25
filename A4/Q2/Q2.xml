@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<OnlineMedia>
+	<Website>
+
+		<URL>www.siteA.com</URL>
+		<CommonName>Site A</CommonName>
+		<Reliability>Great</Reliability>
+
+		<VideoLibrary>
+
+			<Video>
+				<VideoTitle>Movie1</VideoTitle>
+				<VideoRuntime>50</VideoRuntime>
+				<VideoEncodingFormat>mp4</VideoEncodingFormat>
+			</Video>
+
+			<Video>
+				<VideoTitle>Movie2</VideoTitle>
+				<VideoRuntime>90</VideoRuntime>
+				<VideoEncodingFormat>avi</VideoEncodingFormat>
+			</Video>
+
+			<Video>
+				<VideoTitle>Movie3</VideoTitle>
+				<VideoRuntime>10</VideoRuntime>
+				<VideoEncodingFormat>mov</VideoEncodingFormat>
+			</Video>
+
+			<Video>
+				<VideoTitle>Movie4</VideoTitle>
+				<VideoRuntime>220</VideoRuntime>
+				<VideoEncodingFormat>wmv</VideoEncodingFormat>
+			</Video>
+
+		</VideoLibrary>
+	</Website>
+
+	<Website>
+
+		<URL>www.siteB.com</URL>
+		<CommonName>Site B</CommonName>
+		<Reliability>Good</Reliability>
+
+		<VideoLibrary>
+
+			<Video>
+				<VideoTitle>Movie5</VideoTitle>
+				<VideoRuntime>100</VideoRuntime>
+				<VideoEncodingFormat>mp4</VideoEncodingFormat>
+			</Video>
+
+			<Video>
+				<VideoTitle>Movie6</VideoTitle>
+				<VideoRuntime>320</VideoRuntime>
+				<VideoEncodingFormat>mov</VideoEncodingFormat>
+			</Video>
+
+			<Video>
+				<VideoTitle>Movie7</VideoTitle>
+				<VideoRuntime>70</VideoRuntime>
+				<VideoEncodingFormat>avi</VideoEncodingFormat>
+			</Video>
+
+			<Video>
+				<VideoTitle>Movie8</VideoTitle>
+				<VideoRuntime>200</VideoRuntime>
+				<VideoEncodingFormat>mp4</VideoEncodingFormat>
+			</Video>
+
+		</VideoLibrary>
+	</Website>
+
+	<Website>
+		<URL>www.siteC.com</URL>
+		<CommonName>Site C</CommonName>
+		<Reliability>Ok</Reliability>
+
+		<VideoLibrary>
+
+			<Video>	
+				<VideoTitle>Movie9</VideoTitle>
+				<VideoRuntime>250</VideoRuntime>
+				<VideoEncodingFormat>wmv</VideoEncodingFormat>
+			</Video>
+
+
+			<Video>
+				<VideoTitle>Movie10</VideoTitle>
+				<VideoRuntime>280</VideoRuntime>
+				<VideoEncodingFormat>avi</VideoEncodingFormat>
+			</Video>
+
+
+			<Video>
+				<VideoTitle>Movie11</VideoTitle>
+				<VideoRuntime>130</VideoRuntime>
+				<VideoEncodingFormat>avi</VideoEncodingFormat>
+			</Video>
+
+			<Video>
+				<VideoTitle>Movie12</VideoTitle>
+				<VideoRuntime>50</VideoRuntime>
+				<VideoEncodingFormat>wmv</VideoEncodingFormat>
+			</Video>
+
+		</VideoLibrary>
+	</Website>
+
+	<Website>
+
+		<URL>www.siteD.com</URL>
+		<CommonName>Site D</CommonName>
+		<Reliability>Awful</Reliability>
+
+		<VideoLibrary>
+
+			<Video>
+				<VideoTitle>Movie13</VideoTitle>
+				<VideoRuntime>50</VideoRuntime>
+				<VideoEncodingFormat>mov</VideoEncodingFormat>
+			</Video>
+
+			<Video>
+				<VideoTitle>Movie14</VideoTitle>
+				<VideoRuntime>80</VideoRuntime>
+				<VideoEncodingFormat>avi</VideoEncodingFormat>
+			</Video>
+
+			<Video>
+				<VideoTitle>Movie15</VideoTitle>
+				<VideoRuntime>30</VideoRuntime>
+				<VideoEncodingFormat>mov</VideoEncodingFormat>
+			</Video>
+
+			<Video>
+				<VideoTitle>Movie16</VideoTitle>
+				<VideoRuntime>140</VideoRuntime>
+				<VideoEncodingFormat>avi</VideoEncodingFormat>
+			</Video>
+							
+		</VideoLibrary>
+	</Website>
+
+</OnlineMedia>

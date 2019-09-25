@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>JQuery DOM Walk</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <div>
+            <h1>Walking the DOM...</h1>
+        </div>
+
+        <h3>Nodes will print here...</h3>
+        <div id=mydiv></div>
+
+        <script>
+
+            // Global string variable
+            var str = "";
+
+            // Recursively walk the DOM
+            function walkTheDOM(node, count) { 
+				$(node).children().each(function() {
+				    var nodeName = count + ") " + this.nodeName + "<br>";
+				    str += nodeName;
+				    walkTheDOM(this,count+1);
+                    var nodeName = count + ") /" + this.nodeName + "<br>";
+                    str += nodeName;
+				});
+            }
+
+            // Call the walkTheDOM function
+            var startCount = 1; 
+            var startNode = document;
+            walkTheDOM(startNode, startCount);
+
+            // Print the results
+            $("#mydiv").html(str);
+
+		</script>
+
+    </body>
+</html> 

@@ -1,0 +1,2 @@
+# Distributed Computing (COMP3010)
+Delved into the client-server model and various methods of interprocess communcation (especially over the web). Various tools used include manipulating HTTP & HTML via scripting languages such as PHP, Perl or Python, and utilizing XML tools such as XSLT and AJAX for machine-neutral message exchanges and asynchronous web requests. The class also looked at middle ware such as Java RPC and RMI, and studied distributed election algorithms.
